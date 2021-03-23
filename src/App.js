@@ -1,26 +1,31 @@
 import React, { useState } from 'react';
-import ConcertFormDemo from './ConcertoFormDemo';
-import MarkdownEditorDemo from './MarkdownEditorDemo';
 import styled from 'styled-components';
+import LegalEditor from './legaleditor';
 
 const Button = styled.button`
   margin: 5px;
+`;
+
+const Wrapper = styled.div`
+  border-radius: 3px;
+  margin: 20px;
+  padding: 20px;
+  width: min-content;
 `;
 
 /**
  * Starter App
  */
 export const App = () => {
-  const [view, setView] = useState('editor')
   return (
-    <div style={{ padding: '50px' }}>
-      <h1>Welcome to the Web Components Starter App</h1>
-        <Button onClick={() => setView('editor')}>View Markdown Editor Demo</Button>
-        <Button onClick={() => setView('form')}>View Concerto Form Demo</Button>
-      <hr />
-      { view === 'editor' && <MarkdownEditorDemo /> }
-      { view === 'form' && <ConcertFormDemo /> }
-    </div>
+    <Wrapper>
+      <h1>Contract Editor Demo</h1>
+      <p>
+        This is a demo of editing a contract containing a UK Legal Schema <a href="https://templates.legalschema.org/bill-of-lading@0.1.0.html">Bill of Lading template</a>.
+        The contract editor supports editing documents with rich-text formatting and embedded structured templates.
+      </p>
+      <LegalEditor />
+    </Wrapper>
   )
 }
 
