@@ -25,7 +25,7 @@ export const App = () => {
         The contract editor supports editing documents with rich-text formatting and embedded structured templates. The editor itself is Open Source and may be freely embedded in applications. [Contributions are welcome](https://github.com/accordproject/web-components).
       </p>
       <p>
-        The contract editor is Open Source and may be freely embedded in applications. [Contributions are welcome](https://github.com/accordproject/web-components).
+        The contract editor is Open Source and may be freely embedded in applications. <a href="https://github.com/accordproject/web-components">Contributions are welcome.</a>
       </p>
       <LegalEditor />
     </Wrapper>
